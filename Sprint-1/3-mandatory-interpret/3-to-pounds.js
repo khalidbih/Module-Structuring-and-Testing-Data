@@ -25,3 +25,9 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 2. line (3) it returns a substring from the given string, it takes penceString and returns the substring that start with index 0 ends one character before the end we have 399p it returns 399.
+// 3. line (8) We now have the string "399", which has 3 characters. This ensures we can split it into pounds and pence correctly.
+// 4. line (9) We have a start and an end index. We start at 0 and end two characters before the string’s end, because the last two characters represent the pence. This gives us the pounds part.   
+// 5. line (14) This takes the last two characters of the string, which represent the pence portion of the price.it also Extracts the pence digits safely and makes sure it’s always two digits, even if the original number was small.
+// 6. line (18) This prints the final price to the console in pounds and pence, using the pounds and pence variables to show it like £3.99.
+
