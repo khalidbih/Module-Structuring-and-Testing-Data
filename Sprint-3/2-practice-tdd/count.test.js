@@ -22,3 +22,24 @@ test("should count multiple occurrences of a character", () => {
 // And a character char that does not exist within the case-sensitive str,
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
+
+test("returns 0 if the character is not in the string", () => {
+  const str = "bread";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toBe(0);
+});
+
+test("counts a character that appears once", () => {
+  const str = "bread";
+  const char = "d";
+  const count = countChar(str, char);
+  expect(count).toBe(1);
+});
+
+test("counts how many times a character appears", () => {
+  const str = "breadboard";
+  const char = "b";
+  const count = countChar(str, char);
+  expect(count).toBe(2);
+});
