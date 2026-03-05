@@ -1,5 +1,8 @@
-function repeat() {
-  return "hellohellohello";
+function repeatStr(str, count) {
+  if (count < 0) {
+    throw new Error("count cannot be negative");
+  }
+  return str.repeat(count);
 }
 
-module.exports = repeat;
+module.exports = repeatStr;
