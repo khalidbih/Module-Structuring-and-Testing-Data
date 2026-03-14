@@ -30,7 +30,7 @@ test("returns 0 if the character is not in the string", () => {
   expect(count).toBe(0);
 });
 
-test("counts a character that appears once", () => {
+test("returns 1  when the character appears once in the string", () => {
   const str = "bread";
   const char = "d";
   const count = countChar(str, char);
