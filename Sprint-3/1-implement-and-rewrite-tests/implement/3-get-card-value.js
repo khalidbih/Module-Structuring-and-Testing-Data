@@ -23,10 +23,17 @@
 
 function getCardValue(card) {
   const rank = card.slice(0, -1);
+  const suit = card.slice(-1);
+
+  const validSuits = ["♠", "♥", "♦", "♣"];
+
+  if (!validSuits.includes(suit)) {
+    throw new Error("invalid card suit.");
+  }
 
   if (rank === "A") return 11;
-  if (["K", "Q", "J", "10"].includes(rank)) return 10;
-  if (["2", "3", "4", "5", "6", "7", "8", "9"].includes(rank))
+  if (["K", "Q", "J"].includes(rank)) return 10;
+  if (["2", "3", "4", "5", "6", "7", "8", "9", "10"].includes(rank))
     return Number(rank);
 
   throw new Error("invalid card rank.");
@@ -60,6 +67,11 @@ try {
 
   // This line will not be reached if an error is thrown as expected
   console.error("Error was not thrown for invalid card");
+} catch (e) {}
+
+try {
+  getCardValue("A?");
+  console.error("Error was not thrown for invalid suit");
 } catch (e) {}
 
 // What other invalid card cases can you think of?
