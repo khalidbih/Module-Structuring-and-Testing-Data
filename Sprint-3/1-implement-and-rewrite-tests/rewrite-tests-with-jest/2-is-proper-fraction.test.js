@@ -17,10 +17,10 @@ test("should return true when absolute numerator is less than absolute denominat
 test("should return false when numerator equals denominator", () => {
   expect(isProperFraction(3, 3)).toEqual(false);
 });
-test("should return true when numerator < |denominator| and denominator is negative", () => {
+test("should return true when numerator < denominator and denominator is negative", () => {
   expect(isProperFraction(4, -7)).toEqual(true);
 });
-test("should return true when numerator and denominator are both negative and |numerator| < |denominator|", () => {
+test("should return true when numerator and denominator are both negative and numerator < denominator", () => {
   expect(isProperFraction(-4, -7)).toEqual(true);
 });
 test("should return true when numerator is zero and denominator is negative", () => {
